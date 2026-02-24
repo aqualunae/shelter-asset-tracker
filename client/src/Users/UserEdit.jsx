@@ -79,6 +79,7 @@ const UserEdit = () => {
                 }
             })
         } else {
+            userData.errorFields = []
             setChanges(userData)
         }
     }

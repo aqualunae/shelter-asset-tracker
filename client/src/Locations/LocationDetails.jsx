@@ -77,7 +77,7 @@ const LocationDetails = () => {
     }
 
     // put the units that have items which need to be assessed or discarded at the top of the list
-    units?.sort((a, b) => {
+    filteredUnits?.sort((a, b) => {
         return a.name.localeCompare(b.name)
     }).sort((a, b) => {
         return a.inspectCount < b.inspectCount ? 1 : 0
@@ -93,7 +93,7 @@ const LocationDetails = () => {
         if ( unit.discardCount > 0 ) {
             flag = flagOptions[2]
         } else if ( unit.inspectCount > 0 ) {
-            flag = flagOptions [1]
+            flag = flagOptions[1]
         }
 
         return (

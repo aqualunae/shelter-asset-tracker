@@ -85,7 +85,7 @@ const UnitDetails = () => {
     })
 
     filteredItems?.sort((a, b) => {
-        return new Date(b.inspectedDate) - new Date(a.inspectedDate)
+        return b.itemName.localeCompare(a.itemName)
     }).sort((a, b) => {
         return a.status === "inspect"
     }).sort((a, b) => {
@@ -241,7 +241,7 @@ const UnitDetails = () => {
                         </tr>
                     </thead>
                     <tbody>
-                        { displayItems.length > 0 ? displayItems : <td colSpan={ 4 }>No items yet.</td> }
+                        { displayItems.length > 0 ? displayItems : <td colSpan={ 5 }>No items yet.</td> }
                     </tbody>
                 </table>
                 <table className="c-table-info align-middle mobile-yes">
@@ -251,7 +251,7 @@ const UnitDetails = () => {
                         </tr>
                     </thead>
                     <tbody>
-                        { mobileDisplay.length > 0 ? mobileDisplay : <td colSpan={ 4 }>No items yet.</td> }
+                        { mobileDisplay.length > 0 ? mobileDisplay : <td>No items yet.</td> }
                     </tbody>
                 </table>
             </div>

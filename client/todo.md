@@ -48,7 +48,7 @@ interface Icon {
 
 ## Styling
 - ✅ icon selector interface
-- header highlight color
+- ✅ header highlight color
 - ✅ header overlap
 - ✅ danger color
 - ✅ checkboxes
@@ -70,14 +70,14 @@ interface Icon {
 - get a from email set up for shelter
 - ✅ funding proposal
 - documentation
-    - end user
-    - admin user
+    - ✅ end user
+    - ✅ admin user
     - ✅ maintenance
     - continued development
     - copyright
     - contact
 - real deployment
-- schedule training
+- ✅ schedule training
 
 ## Reports
 - ✅ send data to api
