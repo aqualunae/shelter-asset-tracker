@@ -21,7 +21,10 @@ const FAQ = () => {
                 <h2>Navigation</h2>
                 <div className="row title-row">
                     <div className="col">
-                        <Button text="Overview" linkTo="#overview" type="nav" />
+                        <Button text="App Info" linkTo="#app-info" type="nav" />
+                    </div>
+                    <div className="col">
+                        <Button text="Policy" linkTo="#policy" type="nav" />
                     </div>
                 </div>
                 <h3>General User Actions</h3>
@@ -74,7 +77,7 @@ const FAQ = () => {
             </nav>
             <div className="page-content">
                 <h2 id="overview-heading">Overview</h2>
-                <div className="row row-info general" id="overview">
+                <div className="row row-info general" id="app-info">
                     <h3>App Info</h3>
                     <p>The Shelter Asset Tracker, or the SAT, is a tool to help you keep track of the furniture and appliances owned by your organization. No more surprise expenses: keeping track of item age and condition allows Central Office to predict and budget for needed replacements. Every time an item is bought, received, damaged, or discarded, you should update the SAT.</p>
                     <h4>Where to Find the App</h4>
@@ -112,7 +115,7 @@ const FAQ = () => {
 
                     <h4>How to Access the Database</h4>
                     <ul>
-                        <li>Open a web brower and type in <a href="https://shelter-asset-tracker.onrender.com/">https://shelter-asset-tracker.onrender.com/</a></li>
+                        <li>Open a web brower and type in <a href="https://sat.shelternovascotia.ca/">sat.shelternovascotia.ca</a></li>
                         <li>Type in your user email and password to log in.</li>
                     </ul>
 
