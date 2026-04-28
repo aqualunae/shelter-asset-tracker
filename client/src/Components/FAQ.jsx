@@ -73,8 +73,9 @@ const FAQ = () => {
                 </> }
             </nav>
             <div className="page-content">
+                <h2 id="overview-heading">Overview</h2>
                 <div className="row row-info general" id="overview">
-                    <h3>Overview</h3>
+                    <h3>App Info</h3>
                     <p>The Shelter Asset Tracker, or the SAT, is a tool to help you keep track of the furniture and appliances owned by your organization. No more surprise expenses: keeping track of item age and condition allows Central Office to predict and budget for needed replacements. Every time an item is bought, received, damaged, or discarded, you should update the SAT.</p>
                     <h4>Where to Find the App</h4>
                     <p>The SAT can be reached directly by going to <a href="https://shelter-asset-tracker.onrender.com/">shelter-asset-tracker.onrender.com</a> <br />It can also be reached at the <a href="https://sat.shelternovascotia.com/">SAT subdomain</a> of your organization's website.</p>
@@ -88,6 +89,53 @@ const FAQ = () => {
                     <p><b>Users</b>: A user account corresponds to one person who needs to communicate about the Items in the SAT. There are two types of Users: General and Admin.</p>
                     <p><b>General Users</b> are usually people who work directly with the people your organization serves. Most General Users only have access to one Location. General Users only need to worry about making sure that the Items in the SAT accurately reflect the furniture and appliances in the Location at which you work. Locations, Units, and Categories are defined by the Admin Users.</p>
                     <p><b>Admin Users</b> are usually people who need access to data to make decisions. Admin Users have full access to the app. They have permission to do everything that General Users can do, at all Locations. Locations, Units, and Categories are defined by the Admin Users. Admin Users also have access to the powerful Reporting features in the Dashboard. To learn more about Admin User functionality, <HashLink to="#admin-heading">click here</HashLink> or scroll down to the Admin Users section.</p>
+                </div>
+                <div className="row row-info general" id="policy">
+                    <h3>Policy</h3>
+                    <p>The Shelter Asset Tracker is a web-based database that tracks all owned (not rented) furniture and, appliances valued over $200.00 within each program and office space owned/rented by Shelter Nova Scotia. If you want to include items valued under $200.00 in the database, it’s at your discretion.</p>
+                    <p>The SAT is mobile-friendly; the layout looks different, but all the features and functions remain.</p>
+                    <p>Within the database itself, there is a user guide and a copy of this policy for ease of access. (You are here!)</p>
+
+                    <h4>Purpose</h4>
+                    <ul>
+                        <li>Allows us to maintain insurance at an adequate level for replacement if required due to damage, disaster etc.</li>
+                        <li>Assets depreciate over time. The database allows this depreciation to be completed annually thus providing a more accurate financial position of our assets.</li>
+                        <li>Budgeting for furniture and appliances will be easier as the database provides a flagging system for the life cycle of an item. For programs that have tenants, you can use this system for unit flips that haven't been vacated in a while to ensure we are proactive where possible in replacing furniture and appliances.</li>
+                        <li>A centralized location to store warranty/receipts for easy access.</li>
+                    </ul>
+
+                    <h4>Accounts</h4>
+                    <h5>General Account</h5>
+                    <p>Each House/Program Manager will have a general account for the program they oversee only. The Sector Director will create the general accounts and assist in password resetting where necessary.  Reports, recovery of deleted items, and modification to drop-down menus, are not functions of the general account.  These requests must be sent to your respective Sector Director.</p>
+                    <h5>Admin Account</h5>
+                    <p>The Sector Director or designate, Operations, and Finance will have Admin accounts. Admin account holders can make changes to drop-down menus, add users, and make other changes to the database. Finance and Ops will have access to all programs; Sector Directors access will be specific to their Sector.</p>
+
+                    <h4>How to Access the Database</h4>
+                    <ul>
+                        <li>Open a web brower and type in <a href="https://shelter-asset-tracker.onrender.com/">https://shelter-asset-tracker.onrender.com/</a></li>
+                        <li>Type in your user email and password to log in.</li>
+                    </ul>
+
+                    <h4>Data Management</h4>
+                    <p>The House/Program Manager is the only person who enters, updates, and removes data from their location; no other employees will have access.</p>
+                    <p>At a minimum, each month as part of the month-end process, House/Program Managers are to list items that have been:</p>
+                    <ul>
+                        <li><b>ADDED</b>: any furniture/appliances purchased. When adding items, please be as descriptive as possible, i.e. purchase of a TV, list the brand name and size.</li>
+                        <li><b>MOVED</b>: to a different location within the property.</li>
+                        <li><b>SCHEDULED</b>: to be thrown out, but still on the property.</li>
+                        <li><b>DISCARDED</b>: has been removed from the property.</li>
+                    </ul>
+
+                    <h4>Purchases, Warranty, and Images</h4>
+                    <ul>
+                        <li><b>Required</b>: Receipts and/or warranty information must be uploaded as attachments (JPEG, PDF and PNG format). Pictures must be uploaded of items with a value of $1,000 or more.</li>
+                        <li><b>Optional</b>: Uploading pictures of items valued at less than $1,000 is optional (JPEG, PDF, PNG format).</li>
+                        <li>For items on sale, please use the actual purchase price (sale) in the database for the value.</li>
+                    </ul>
+
+                    <h4>Labelling and Inspection</h4>
+                    <p>A label maker is on site for use. Where multiple items occupy the same space/room, i.e. a boardroom has 20 board chairs, each chair will need to be labeled and entered individually in the database. (The label might be: Chair 01, Chair 02 etc.) The label system is created by the House Manager, and the label needs to match the data in the system.</p>
+                    <p>If the purchased item is the only one of its kind in the space, then no physical label is required.</p>
                 </div>
                 <h2 id="general-heading">Guide for General Users</h2>
                 <div className="row row-info general" id="general-overview">

@@ -39,13 +39,15 @@ const getFinancial = async (facility) => {
         };
 
         if (facility) {
-            queryOptions.include[0].where = { id: facility }
+            queryOptions.include[0].where = { facilityid: facility }
         };
 
         const items = await models.item.findAll(queryOptions);
 
-        const report = items.map(item => {
-            const currentValue = calculateCurrentValue(item.initialvalue, item.createdAt, depreciationRate);
+        const report = items.filter(item => {
+            return item.unit && item.unit.facility
+        }).map(item => {
+            const currentValue = calculateCurrentValue(item.initialvalue, item.createdat, depreciationRate);
 
             return {
                 id: item.id,
@@ -128,12 +130,14 @@ const getInventory = async (facility) => {
         };
 
         if (facility) {
-            queryOptions.include[0].where = { id: facility };
+            queryOptions.include[0].where = { facilityid: facility };
         };
 
         const items = await models.item.findAll(queryOptions);
 
-        const report = items.map(item => {
+        const report = items.filter(item => {
+            return item.unit && item.unit.facility
+        }).map(item => {
             const currentValue = calculateCurrentValue(item.initialvalue, item.createdat, depreciationRate);
             const lastComment = item.comments[0] || {};
 
@@ -200,7 +204,7 @@ const getEol = async (facility, startDate, endDate) => {
         };
 
         if (facility) {
-            queryOptions.include[0].where = { id: facility };
+            queryOptions.include[0].where = { facilityid: facility };
         };
 
         const items = await models.item.findAll(queryOptions);
@@ -210,7 +214,9 @@ const getEol = async (facility, startDate, endDate) => {
             return itemEol >= startDate && itemEol <= endDate;
         });
 
-        const report = eolItems.map(item => {
+        const report = eolItems.filter(item => {
+            return item.unit && item.unit.facility
+        }).map(item => {
             const currentValue = calculateCurrentValue(item.initialvalue, item.createdat, depreciationRate);
             return {
                 id: item.id,
