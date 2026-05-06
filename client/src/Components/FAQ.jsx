@@ -95,7 +95,8 @@ const FAQ = () => {
                 </div>
                 <div className="row row-info general" id="policy">
                     <h3>Policy</h3>
-                    <p>The Shelter Asset Tracker is a web-based database that tracks all owned (not rented) furniture and, appliances valued over $200.00 within each program and office space owned/rented by Shelter Nova Scotia. If you want to include items valued under $200.00 in the database, it’s at your discretion.</p>
+                    <p>The Shelter Asset Tracker is a web-based database that tracks all owned (not rented) furniture, appliances, and equipment (boilers, hot water tanks, generators, computers) valued over $200.00 within each program and office space owned/rented by Shelter Nova Scotia. If you want to include items valued under $200.00 in the database, it's at your discretion.</p>
+                    <p>Facilicy maintenance and upgrades, such as roof replacement, new siding, deck renovations etc will not be captured in this database.</p>
                     <p>The SAT is mobile-friendly; the layout looks different, but all the features and functions remain.</p>
                     <p>Within the database itself, there is a user guide and a copy of this policy for ease of access. (You are here!)</p>
 
@@ -139,6 +140,7 @@ const FAQ = () => {
                     <h4>Labelling and Inspection</h4>
                     <p>A label maker is on site for use. Where multiple items occupy the same space/room, i.e. a boardroom has 20 board chairs, each chair will need to be labeled and entered individually in the database. (The label might be: Chair 01, Chair 02 etc.) The label system is created by the House Manager, and the label needs to match the data in the system.</p>
                     <p>If the purchased item is the only one of its kind in the space, then no physical label is required.</p>
+                    <p>(Housing Only) Unit Flips: after completing a full inspection of a Unit, let a person with admin rights know so that they can print an Inventory Report, which will be placed in the new tenant's file and referenced as needed.</p>
                 </div>
                 <h2 id="general-heading">Guide for General Users</h2>
                 <div className="row row-info general" id="general-overview">
@@ -200,7 +202,7 @@ const FAQ = () => {
                         <li>If the Item's Status is <b>Discard</b>, the button will read <b>Mark Discarded</b>. Clicking it will delete the Item from the Unit, indicating that the physical appliance or piece of furniture has been disposed of and is no longer present in the Location.</li>
                     </ol>
                     <h5>Flip Unit</h5>
-                    <p>To change the status of all Items in a Unit to Inspect, you can click the <b>Flip Unit</b> button. You may wish to do this when a tenant moves out, when you believe there has been water damage in the building, or at other times. By flagging all Items Inspect, you signal to yourself and other Users that the Items need to be checked over.</p>
+                    <p>To change the status of all Items in a Unit to Inspect, you can click the <b>Flip Unit</b> button. By flagging all Items Inspect, you signal to yourself and other Users that the Items need to be checked over. You must do this when a tenant moves out of a housing unit. You may also wish to do this when you believe there has been water damage in the building, or at other times. Once inspection is complete, contact an Admin User so that they can print an Inventory Report.</p>
                     <h5>Differences on Mobile View</h5>
                     <p>If you are viewing the SAT on a small screen, such as a mobile phone, there is not enough room to display the table of Items. Instead, it will be formatted as a list of buttons. Each button will be labeled with the Label of the Item, and its Category in parentheses. Tapping on an Item button will take you directly to the Record Inspection page.</p>
                 </div>
@@ -352,6 +354,16 @@ const FAQ = () => {
                             <li>The <b>Financial Report</b> emphasizes the current and initial value of items.</li>
                             <li>The <b>Inventory Report</b> is a list of all items, pulled directly from the database.</li>
                             <li>The <b>End of Life Report</b> is a list of items with an End of Life date within the date range specified in the filters on the Items to Discard Soon section.</li>
+                        </ul>
+                        <h5>Unit Flip Report</h5>
+                        <p>When a tenant leaves a Unit, the General User assigned to that Location will Flip the Unit and inspect every Item in the Unit. Once every Item has been inspected, they will let you know, so that you can print an Inventory Report. To do this:</p>
+                        <ul>
+                            <li>Select the Location from the dropdown on the Dashboard.</li>
+                            <li>Click the Inventory Report button.</li>
+                            <li>Open the downloaded CSV file and select only the Items from that Unit.</li>
+                            <li>Copy them to a new sheet.</li>
+                            <li>Print the sheet containing only the Flipped Unit's Items.</li>
+                            <li>Place it in the file of the new tenant.</li>
                         </ul>
                     </div>
                     <div className="row row-info admin" id="admin-settings">

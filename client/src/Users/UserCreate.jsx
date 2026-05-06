@@ -140,7 +140,7 @@ const UserCreate = () => {
                     error: false
                 })
                 setUnsaved(false)
-                navigate(`/user/${response.userId}`)
+                navigate(`/users`)
             }
         })
     }
