@@ -29,10 +29,10 @@ const LogIn = () => {
 
     // if the user has a session but has somehow erased their context, reset context
     useEffect(() => {
-        if (!userDetails.userId && sessionStorage.getItem("userId")) {
-            const userId = parseInt(sessionStorage.getItem("userId"))
-            const isAdmin = sessionStorage.getItem("isAdmin") === "true"
-            const facilityAuths = sessionStorage.getItem("facilityAuths").split(",").map(auth => parseInt(auth))
+        if (!userDetails.userId && localStorage.getItem("userId")) {
+            const userId = parseInt(localStorage.getItem("userId"))
+            const isAdmin = localStorage.getItem("isAdmin") === "true"
+            const facilityAuths = localStorage.getItem("facilityAuths").split(",").map(auth => parseInt(auth))
             setUserDetails({
                 userId,
                 isAdmin,
@@ -83,9 +83,9 @@ const LogIn = () => {
 
                 // set user info to context and session storage
                 setUserDetails(response)
-                sessionStorage.setItem("userId", response.userId)
-                sessionStorage.setItem("isAdmin", response.isAdmin)
-                sessionStorage.setItem("facilityAuths", response.facilityAuths)
+                localStorage.setItem("userId", response.userId)
+                localStorage.setItem("isAdmin", response.isAdmin)
+                localStorage.setItem("facilityAuths", response.facilityAuths)
                 setStatus({
                     message: "Welcome.",
                     error: false

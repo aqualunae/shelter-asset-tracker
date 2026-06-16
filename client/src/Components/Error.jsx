@@ -40,9 +40,9 @@ const Error = ({ err }) => {
             break
         case "anonymous":
             errorText = "You are not logged in. Please log in to use this app."
-            sessionStorage.removeItem("userId")
-            sessionStorage.removeItem("isAdmin")
-            sessionStorage.removeItem("facilityAuths")
+            localStorage.removeItem("userId")
+            localStorage.removeItem("isAdmin")
+            localStorage.removeItem("facilityAuths")
             setUserDetails({
                 userId: null,
                 isAdmin: false,

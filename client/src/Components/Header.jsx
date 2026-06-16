@@ -1,6 +1,6 @@
 // external dependencies
 import { useContext, useEffect, useState } from 'react'
-import { Link, NavLink, useLocation } from 'react-router-dom'
+import { Link, NavLink, useLocation, Navigate, useNavigate } from 'react-router-dom'
 
 // internal dependencies
 import { userContext, statusContext } from '../Services/Context'
@@ -48,6 +48,22 @@ const Header = () => {
             })
         })()
     }, [])
+
+    // const [ lastPage, setLastPage ] = useState("/")
+    // const [ target, setTarget ] = useState("/")
+    // useEffect(() => {
+    //     console.log(location.pathname)
+    //     if (location.pathname != target && location.pathname != "/")
+    //     {
+    //         setTarget(location.pathname)
+    //     }
+    // }, [ userDetails, location.pathname ])
+
+    // if (lastPage != target && target != "/locations" && target != "/")
+    // {
+    //     setLastPage(target)
+    //     return <Navigate to={ target } />
+    // }
 
     return (
         <header className="navbar navbar-expand-lg">

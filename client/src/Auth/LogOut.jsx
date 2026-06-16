@@ -36,9 +36,9 @@ const LogOut = () => {
                     })
 
                     // remove login information from session storage as well as the context
-                    sessionStorage.removeItem("userId")
-                    sessionStorage.removeItem("isAdmin")
-                    sessionStorage.removeItem("facilityAuths")
+                    localStorage.removeItem("userId")
+                    localStorage.removeItem("isAdmin")
+                    localStorage.removeItem("facilityAuths")
                     setStatus({
                         message: "You have been successfully logged out.",
                         error: false
